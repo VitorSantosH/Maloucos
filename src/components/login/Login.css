@@ -1,9 +1,9 @@
-.login{
+.login {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    margin-top:  6vh;
+    margin-top: 6vh;
 }
 
 .login img {
@@ -16,16 +16,16 @@
     padding-top: 15px;
 }
 
-.InputsLogin{
+.InputsLogin {
     display: flex;
     flex-direction: column;
-    max-width: 80vw;
-    overflow: hidden;
+    width: 80vw;
+    min-height: max-content;
     box-sizing: content-box;
     padding-bottom: 25px;
 }
 
-.inputEmail, .inputSenha{
+.inputEmail, .inputSenha {
     padding-top: 15px;
     display: flex;
     flex-direction: column;
@@ -35,31 +35,57 @@
     max-width: 600px;
     color: #FFFFFF;
 }
-.inputEmail input, .inputSenha input{
+
+.inputEmail input, .inputSenha input {
     margin-top: 15px;
     width: 75vw;
     text-decoration: none;
     background-color: transparent;
     border: none;
     color: #FFFFFF;
-    font-size: 16px ;
+    font-size: 16px;
     padding: 10px 10px 8px 10px;
     border-bottom: 1px solid #00F7EF;
-    border-radius: 4px 4px 0px 0px ;
+    border-radius: 4px 4px 0px 0px;
 }
 
-.inputEmail input:focus, .inputSenha input:focus{
+.inputEmail input:focus, .inputSenha input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
     background-color: #2f3030;
 }
-.inputSenha{
+
+.inputSenha {
     margin-top: 40px;
 }
 
-.InputsLogin span{
+.InputsLogin span {
     margin-top: 30px;
     width: 100%;
     text-align: center;
     color: #00F7EF;
+}
+
+.entre, .inscreva {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72vw;
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 4px ;
+    font-weight: 900;
+    font-size: 18px;
+    
+}
+
+.entre {
+    background-color: #00F7EF;
+    color: #2f3030;
+    height: 30px;
+}
+.inscreva {
+    background: linear-gradient(to right, #89fffd,  #05b0e4,#ec79df, #ef32d9);
+    height: 45px;
 }

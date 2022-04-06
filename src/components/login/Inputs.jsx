@@ -11,6 +11,7 @@ const InputsLogin = () => {
     const [senhaStyle, setSenhaStyle] = useState(undefined)
 
     useEffect(() => {
+
         if(emailValue !== undefined && emailValue !== "" && emailValue !== null ){
             setEmailStyle("#2f3030")
         } else {
@@ -23,7 +24,7 @@ const InputsLogin = () => {
         } else {
             setSenhaStyle("")
         }
-        console.log(senhaValue)
+        
     
     }, [emailValue, senhaValue])
 
@@ -61,6 +62,20 @@ const InputsLogin = () => {
             <span>
                 Esqueci minha senha
             </span>
+
+            <br />
+
+            <div className="entre">
+                Entre
+            </div>
+
+            <span className="ou">
+                OU
+            </span>
+            
+            <div className="inscreva">
+                INSCRAVA-SE
+            </div>
 
         </div>
     )
