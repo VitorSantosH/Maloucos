@@ -1,0 +1,65 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin-top:  6vh;
+}
+
+.login img {
+    height: auto;
+    width: 70vw;
+    max-width: 500px;
+}
+
+.login h1 {
+    padding-top: 15px;
+}
+
+.InputsLogin{
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    overflow: hidden;
+    box-sizing: content-box;
+    padding-bottom: 25px;
+}
+
+.inputEmail, .inputSenha{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 60px;
+    width: 80vw;
+    max-width: 600px;
+    color: #FFFFFF;
+}
+.inputEmail input, .inputSenha input{
+    margin-top: 15px;
+    width: 75vw;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px ;
+    padding: 10px 10px 8px 10px;
+    border-bottom: 1px solid #00F7EF;
+    border-radius: 4px 4px 0px 0px ;
+}
+
+.inputEmail input:focus, .inputSenha input:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    background-color: #2f3030;
+}
+.inputSenha{
+    margin-top: 40px;
+}
+
+.InputsLogin span{
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    color: #00F7EF;
+}
