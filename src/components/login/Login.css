@@ -19,10 +19,11 @@
 .InputsLogin {
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    width: 80%;
     min-height: max-content;
     box-sizing: content-box;
     padding-bottom: 25px;
+    align-items: center;
 }
 
 .inputEmail, .inputSenha {
@@ -31,14 +32,13 @@
     flex-direction: column;
     align-items: flex-start;
     height: 60px;
-    width: 80vw;
-    max-width: 600px;
+    width: 100%;
     color: #FFFFFF;
 }
 
 .inputEmail input, .inputSenha input {
     margin-top: 15px;
-    width: 75vw;
+    width: 76vw;
     text-decoration: none;
     background-color: transparent;
     border: none;
@@ -55,6 +55,7 @@
     background-color: #2f3030;
 }
 
+
 .inputSenha {
     margin-top: 40px;
 }
@@ -67,25 +68,36 @@
 }
 
 .entre, .inscreva {
-    width: 100%;
+    width: 76vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 72vw;
-    margin-top: 30px;
     padding: 15px;
     border-radius: 4px ;
     font-weight: 900;
     font-size: 18px;
     
 }
+.entre:active, .inscreva:active {
+    background: linear-gradient(to right, #ef32d9,  #ec79df,#05b0e4, #89fffd)
+}
 
 .entre {
     background-color: #00F7EF;
     color: #2f3030;
-    height: 30px;
+    height: 20px;
 }
-.inscreva {
+.inscreva { 
     background: linear-gradient(to right, #89fffd,  #05b0e4,#ec79df, #ef32d9);
-    height: 45px;
+    height: 35px;
+}
+#esqueci, #ou {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#ou {
+    color: whitesmoke;
+}
+#esqueci:active{
+    filter: brightness(50%);
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import imgOlho from '../../assets/Trailing icon.png'
 
 const InputsLogin = () => {
 
@@ -9,6 +9,7 @@ const InputsLogin = () => {
     const [senhaValue, setSenhaValue] = useState(undefined)
     const [emailStyle, setEmailStyle] = useState(undefined)
     const [senhaStyle, setSenhaStyle] = useState(undefined)
+    const [inputType, setinputType] = useState("password")
 
     useEffect(() => {
 
@@ -27,6 +28,14 @@ const InputsLogin = () => {
         
     
     }, [emailValue, senhaValue])
+
+    const  changeInputType = (e)  => {
+        if(inputType == "password"){
+            setinputType("text")
+        } else {
+            setinputType("password")
+        }
+    }
 
     return (
 
@@ -47,19 +56,28 @@ const InputsLogin = () => {
             <br />
 
             <div className="inputSenha">
-                <label htmlFor="InputSenha">{messageSenha}</label>
+               <div>
+               <label htmlFor="InputSenha">{messageSenha}</label>
+                <img 
+                    src={imgOlho} alt=""  
+                    style={{'width': '30px', 'position':'relative', "left": "65vw", "top": "52px" }}
+                    onClick={e => changeInputType(e)}
+                    />
+               </div>
                 <input
-                    type="password"
+                    type={inputType}
                     name="InputSenha"
                     id="InputSenha"
                     style={{ 'backgroundColor': senhaStyle }}
                     value={senhaValue}
                     onChange={e => setSenhaValue(e.target.value)}
+
                 />
+                
             </div>
 
-            
-            <span>
+        
+            <span id="esqueci">
                 Esqueci minha senha
             </span>
 
@@ -69,7 +87,7 @@ const InputsLogin = () => {
                 Entre
             </div>
 
-            <span className="ou">
+            <span id='ou'>
                 OU
             </span>
             
