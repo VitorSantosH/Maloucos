@@ -1,11 +1,12 @@
 import './App.css';
 
 
-import Routes from './components/Routes';
+import Caminhos  from './components/Routes';
+
 function App() {
   return (
     <div className="App">
-      <Routes/>
+      <Caminhos/>
     </div>
   );
 }

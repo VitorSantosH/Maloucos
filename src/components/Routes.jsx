@@ -2,23 +2,24 @@ import React from "react";
 
 import {
     BrowserRouter as Router,
-    Switch,
+    Routes,
     Route,
 } from "react-router-dom";
 
-
+import Home from './home/Home.jsx';
 import Login from "./login/Login.jsx";
 
-const Routes = () => {
+const Caminhos = () => {
 
     return (
 
         <Router>
-            <Switch>
-                <Route path='/'>
-                    <Login />
-                </Route>
-            </Switch>
+            <Routes>
+
+                <Route exact path='/home' element={<Home />} />
+                <Route exact path='/' element={<Login />} />
+
+            </Routes>
         </Router>
 
 
@@ -27,4 +28,4 @@ const Routes = () => {
 }
 
 
-export default Routes
+export default Caminhos

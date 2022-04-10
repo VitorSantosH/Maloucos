@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    margin-top: 6vh;
+    margin-top: 2vh;
 }
 
 .login img {
@@ -37,7 +37,7 @@
 }
 
 .inputEmail input, .inputSenha input {
-    margin-top: 15px;
+    margin-top: 10px;
     width: 76vw;
     text-decoration: none;
     background-color: transparent;
@@ -78,8 +78,11 @@
     font-size: 18px;
     
 }
-.entre:active, .inscreva:active {
+.inscreva:active{
     background: linear-gradient(to right, #ef32d9,  #ec79df,#05b0e4, #89fffd)
+}
+.entre:active, .rede:active {
+   background: #9cf7f4;
 }
 
 .entre {
@@ -100,4 +103,28 @@
 }
 #esqueci:active{
     filter: brightness(50%);
+}
+
+.loginsRedes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60vw;
+    margin-top: 50px;
+}
+
+.rede, .rede img {
+    width: 40px;
+    max-height: 40px;
+    height: auto;
+    width: auto;
+}
+
+.rede{
+    background-color: #00F7EF;
+    justify-content: center;
+    display: flex;
+    border-radius: 10px;
+    padding-top: 0px;
+    padding: 5px;
 }
