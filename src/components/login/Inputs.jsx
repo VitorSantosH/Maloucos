@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 
 import imgOlho from '../../assets/Trailing icon.png'
 import imgApple from '../../assets/pngegg.png'
@@ -15,6 +15,8 @@ const InputsLogin = (props) => {
     const [emailStyle, setEmailStyle] = useState(undefined)
     const [senhaStyle, setSenhaStyle] = useState(undefined)
     const [inputType, setinputType] = useState("password")
+    const [stylemailLabel, setStyleEmailLabel] = useState(props.statusEmail)
+    const [styleSenhaLabel, setStyleSenhaLabel] = useState(props.statusSenha) 
 
     useEffect(() => {
 
@@ -31,8 +33,18 @@ const InputsLogin = (props) => {
             setSenhaStyle("")
         }
 
+        if (props.statusEmail == false) {
+            setStyleEmailLabel('#be5252')
+            setMessageEmail("Usuário inválido")
+        }
 
-    }, [emailValue, senhaValue])
+        if (props.statusEmail == false) {
+            setStyleSenhaLabel('#be5252')
+            setMessageSenha("Senha inválida")
+        }
+
+    }, [emailValue, senhaValue, stylemailLabel, styleSenhaLabel])
+
 
 
     const changeInputType = (e) => {
@@ -48,7 +60,7 @@ const InputsLogin = (props) => {
         <div className="InputsLogin">
 
             <div className="inputEmail">
-                <label htmlFor="InputMail">{messageEmail}</label>
+                <label htmlFor="InputMail" style={{ 'color': stylemailLabel }}>{messageEmail}</label>
                 <input
                     type="email"
                     name="InputMail"
@@ -63,10 +75,10 @@ const InputsLogin = (props) => {
 
             <div className="inputSenha">
                 <div>
-                    <label htmlFor="InputSenha">{messageSenha}</label>
+                    <label htmlFor="InputSenha" style={{"color": styleSenhaLabel}}>{messageSenha}</label>
                     <img
                         src={imgOlho} alt=""
-                        style={{ 'width': '30px', 'position': 'relative', "left": "62vw", "top": "52px" }}
+                        style={{ 'width': '30px', 'position': 'relative', "left": "62vw", "top": "40px" }}
                         onClick={e => changeInputType(e)}
                     />
                 </div>
@@ -90,18 +102,18 @@ const InputsLogin = (props) => {
             <br />
 
             <div className="entre" onClick={e => props.logar(emailValue, senhaValue)}>
-                Entre
+                Entrar
             </div>
 
             <div className="loginsRedes">
                 <div className="rede">
-                    <img src={imgFacebook} alt=""  />
+                    <img src={imgFacebook} alt="" />
                 </div>
                 <div className="rede">
-                    <img src={imgGoogle} alt=""  />
+                    <img src={imgGoogle} alt="" />
                 </div>
                 <div className="rede">
-                    <img src={imgApple} alt=""  />
+                    <img src={imgApple} alt="" />
                 </div>
             </div>
 

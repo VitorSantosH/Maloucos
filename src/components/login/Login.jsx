@@ -25,9 +25,13 @@ const Login = () => {
                 if(res.data.erros){
                   
                     if(res.data.erros.includes('senha')){
-                        alert('senha')
+                        setStatusSenha(false)
+                    }
+                    if(res.data.erros.includes('user')){
+                        setStatusEmail(false)
                     }
 
+                    return 
                 }
 
                 setUser(res.data)
@@ -36,13 +40,21 @@ const Login = () => {
             })
     }
 
+    function Change(){
+        
+        return (
+            <InputsLogin logar={logar} statusEmail={statusEmail} statusSenha={statusSenha} />
+        )
+    }
+
+
     return (
         <div className="login">
 
-            <img src={logoSrc} alt="" />
+            <img src={logoSrc}className='logoMaloucos' alt="" />
 
             <h1>LOGIN</h1>            
-            <InputsLogin logar={logar} />
+            <Change/>
 
         </div>
     )

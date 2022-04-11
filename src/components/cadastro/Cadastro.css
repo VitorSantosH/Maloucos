@@ -1,0 +1,108 @@
+.cadastro {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divVoltar {
+    width: 100vw;
+    padding-left: 10px;
+
+}
+
+#btVoltar {
+    max-width: 35px;
+    height: auto;
+}
+
+.inputsCadastro {
+
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: #FFFFFF;
+
+}
+
+.inputCadastro {
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    margin-top: 20px;
+
+}
+
+.inputCadastro input {
+
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 10px 10px 8px 10px;
+    border-bottom: 1px solid #00F7EF;
+    border-radius: 4px 4px 0px 0px;
+}
+
+
+.inputCadastro input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    background-color: #2f3030;
+}
+
+.termos {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.termos span {
+    margin-left: 16px;
+}
+
+.checkBox {
+    background-color: transparent;
+    border: solid 1px #00F7EF;
+}
+.checkBox img {
+    width: 20px;
+    height: auto;
+}
+
+.LinkReact {
+
+    color: #00F7EF;
+    text-decoration: none;
+}
+
+.SenhaLabel-Icon{
+    display: flex;
+    flex-direction: row;
+    width: 85vw;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding-right: 20px;
+    
+}
+
+.SenhaLabel-Icon img {
+    width: 30px;
+    position: relative;
+    top: 40px;
+}
