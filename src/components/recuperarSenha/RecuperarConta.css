@@ -1,0 +1,26 @@
+.confirmacao input {
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 10px 10px 8px 10px;
+    border-bottom: 1px solid #00F7EF;
+    border-radius: 4px 4px 0px 0px;
+    width: 75vw;
+}
+
+
+
+.confirmacao input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    background-color: #2f3030;
+}
+
+.confirmacao label {
+    width: 77vw;
+    padding-top: 5vh;
+    font-size: 24px;
+}

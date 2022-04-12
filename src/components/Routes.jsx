@@ -13,7 +13,7 @@ import Login from "./login/Login.jsx";
 import Cadastro from "./cadastro/Cadastro.jsx";
 import Termos from "./termosDeUso/Termos.jsx";
 import Confirmacao from "./confirmacao/Confirmacao.jsx";
-
+import RecuperarConta from "./recuperarSenha/RecuperarConta.jsx";
 
 const Caminhos = () => {
 
@@ -26,6 +26,7 @@ const Caminhos = () => {
                 <Route exact path='/cadastro' element={<Cadastro />} />
                 <Route exact path="/termos-de-uso" element={<Termos />}/>
                 <Route exact path="/confirmacao/:email" element={<Confirmacao/>} />
+                <Route exact path="/recuperarConta/:email" element={<RecuperarConta/>} />
                 <Route exact path='/' element={<Login />} />
                 <Route
                     path="*"

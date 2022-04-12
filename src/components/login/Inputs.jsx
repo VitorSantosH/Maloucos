@@ -4,6 +4,7 @@ import imgOlho from '../../assets/Trailing icon.png'
 import imgApple from '../../assets/pngegg.png'
 import imgGoogle from '../../assets/googleIcon.png'
 import imgFacebook from '../../assets/facebookIcon.png'
+import { Link } from "react-router-dom";
 
 
 const InputsLogin = (props) => {
@@ -16,7 +17,7 @@ const InputsLogin = (props) => {
     const [senhaStyle, setSenhaStyle] = useState(undefined)
     const [inputType, setinputType] = useState("password")
     const [stylemailLabel, setStyleEmailLabel] = useState(props.statusEmail)
-    const [styleSenhaLabel, setStyleSenhaLabel] = useState(props.statusSenha) 
+    const [styleSenhaLabel, setStyleSenhaLabel] = useState(props.statusSenha)
 
     useEffect(() => {
 
@@ -74,10 +75,10 @@ const InputsLogin = (props) => {
             <br />
 
             <div className="inputSenha">
-                <div 
+                <div
                     className="SenhaLabel-Icon"
-                    style={{"width": '75vw'}}>
-                    <label htmlFor="InputSenha" style={{"color": styleSenhaLabel}}>{messageSenha}</label>
+                    style={{ "width": '75vw' }}>
+                    <label htmlFor="InputSenha" style={{ "color": styleSenhaLabel }}>{messageSenha}</label>
                     <img
                         src={imgOlho} alt=""
                         onClick={e => changeInputType(e)}
@@ -97,7 +98,9 @@ const InputsLogin = (props) => {
 
 
             <span id="esqueci">
-                Esqueci minha senha
+                <Link to={`/recuperarConta/${emailValue}`} style={{"textDecoration": "none", 'color': '#00F7EF'}} >
+                    Esqueci minha senha
+                </Link>
             </span>
 
             <br />
