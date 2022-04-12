@@ -1,5 +1,6 @@
 .cadastro {
     margin-top: 2vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,17 +11,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center ;
+    top: 0px;
+    position: absolute;
+    
 }
 
 .divVoltar {
     width: 100vw;
-    padding-left: 10px;
+    padding-top: 35px;
+    padding-left: 15px;
 
 }
 
 #btVoltar {
-    max-width: 35px;
+    width: 60px;
     height: auto;
 }
 
@@ -79,6 +84,7 @@
     background-color: transparent;
     border: solid 1px #00F7EF;
 }
+
 .checkBox img {
     width: 20px;
     height: auto;
@@ -90,7 +96,7 @@
     text-decoration: none;
 }
 
-.SenhaLabel-Icon{
+.SenhaLabel-Icon {
     display: flex;
     flex-direction: row;
     width: 85vw;
@@ -98,7 +104,7 @@
     align-items: center;
     box-sizing: border-box;
     padding-right: 20px;
-    
+
 }
 
 .SenhaLabel-Icon img {

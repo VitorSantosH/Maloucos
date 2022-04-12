@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import api from '../../services/api';
 import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom';
+import Termos from '../termosDeUso/Termos';
+
+
 
 import logoSrc from '../../assets/logoMaloucos.png'
 import btVoltar from '../../assets/bt-voltar.png'
@@ -32,6 +35,8 @@ const Cadastro = () => {
     const [checked, setChecked] = useState(false)
     const [stylePassword2, setStylePassword2] = useState()
     const [menssageLabelSenha2, setMenssageLabelSenha2] = useState('Confirmar Senha')
+    const [dispay, setDispay] = useState(false)
+    const [telValue, setTelValue] = useState()
     const navigate = useNavigate();
 
 
@@ -70,6 +75,25 @@ const Cadastro = () => {
     const CreateAccount = () => {
 
 
+        let cellPattern = new RegExp(/^([0-9]{2}[9]{1}[0-9]{7,8})$/);
+        if (!cellPattern.test(telValue)) {
+            return Swal.fire({
+                icon: 'error',
+                title: 'Erro',
+                text: 'Digite um telefone válido!',
+            })
+        }
+        
+
+        if (password != password2 || password === null  || password === "" || password == undefined) {
+            return Swal.fire({
+                icon: 'error',
+                title: 'Erro',
+                text: 'Digite a senha de maneira igual nos dois campos abaixo',
+            })
+
+        }
+
         if (checked == false) {
             return Swal.fire({
                 icon: 'error',
@@ -83,15 +107,20 @@ const Cadastro = () => {
             .then(res => {
 
                 console.log(res)
-                return navigate('/')
-            
+                return navigate(`/confirmacao/${email}`)
+
             })
 
 
     }
 
+    function ReturnTerms() {
+
+        return <Termos dispay={dispay} setDispay={setDispay} />
+    }
     useEffect(() => {
 
+        console.log(dispay)
         if (password2 !== password) {
             setMenssageLabelSenha2('Digitar a senha novamente, igual ao primeiro campo')
             setStylePassword2('#df6363')
@@ -99,14 +128,16 @@ const Cadastro = () => {
             setMenssageLabelSenha2('Confirmar senha')
             setStylePassword2('')
         }
-    }, [password2])
+    }, [password2, dispay])
+
+
 
     return (
         <div className="cadastro">
             <div className="logos">
 
                 <div className="divVoltar">
-                    <img src={btVoltar} id='btVoltar' alt="" />
+                   <Link to={"/"}> <img src={btVoltar} id='btVoltar' alt="" /></Link>
                 </div>
                 <img src={logoSrc} className='logoMaloucos' alt="" />
 
@@ -147,6 +178,7 @@ const Cadastro = () => {
                             onValueChange={(values) => {
                                 const { formattedValue, value } = values;
                                 let cellPattern = new RegExp(/^([0-9]{2}[9]{1}[0-9]{7,8})$/);
+                                setTelValue(value)
                                 console.log(cellPattern.test(value))
                                 setTel(formattedValue)
 
@@ -172,9 +204,9 @@ const Cadastro = () => {
                     <div className="inputCadastro">
 
                         <div className='SenhaLabel-Icon'>
-                            <label 
+                            <label
                                 htmlFor=""
-                                style={{'color': stylePassword2}}>{menssageLabelSenha2}</label>
+                                style={{ 'color': stylePassword2 }}>{menssageLabelSenha2}</label>
                             <img
                                 src={imgOlho} alt=""
                                 onClick={e => changeInputType(e, 2)}
@@ -182,7 +214,7 @@ const Cadastro = () => {
                         </div>
                         <input
                             type={input2Type}
-                            value={password2}                           
+                            value={password2}
                             onChange={e => setPassword2(e.target.value)}
                         />
                     </div>
@@ -198,7 +230,11 @@ const Cadastro = () => {
 
                             <img src={checkBoxImg} alt="" />
                         </div>
-                        <span>Aceito os <Link className='LinkReact' to='/termos-de-uso'>Termos de Uso </Link> do site </span>
+                        <span>Aceito os
+                            <span
+                                className='LinkReact'
+                                onClick={e => setDispay(true)}
+                            >Termos de Uso</span> do site </span>
                     </div>
 
                     <div
@@ -212,6 +248,12 @@ const Cadastro = () => {
                 </div>
 
             </div>
+
+            <ReturnTerms />
+
+
+
+
         </div>
     )
 }

@@ -74,11 +74,12 @@ const InputsLogin = (props) => {
             <br />
 
             <div className="inputSenha">
-                <div>
+                <div 
+                    className="SenhaLabel-Icon"
+                    style={{"width": '75vw'}}>
                     <label htmlFor="InputSenha" style={{"color": styleSenhaLabel}}>{messageSenha}</label>
                     <img
                         src={imgOlho} alt=""
-                        style={{ 'width': '30px', 'position': 'relative', "left": "62vw", "top": "40px" }}
                         onClick={e => changeInputType(e)}
                     />
                 </div>

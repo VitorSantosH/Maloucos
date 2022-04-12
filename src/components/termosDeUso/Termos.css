@@ -1,0 +1,39 @@
+.termosDeUso{
+    box-sizing: border-box;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+ 
+
+}
+
+.termosDeUso  span {
+    margin-top: 2vh;
+    width: 75vw;
+    font-size: 18px;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    color: #FFFFFF;
+    position: relative;
+    top: -5vh;
+
+}
+.termosDeUso h1 {
+    position: relative;
+    top: -10vh;
+}
+
+.termosDeUso button{
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 30px;
+}
