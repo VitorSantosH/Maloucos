@@ -4,7 +4,7 @@ import NumberFormat from "react-number-format";
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
 import Swal from 'sweetalert2'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Termos from '../termosDeUso/Termos';
 
 
@@ -38,7 +38,7 @@ const Cadastro = () => {
     const [dispay, setDispay] = useState(false)
     const [telValue, setTelValue] = useState()
     const navigate = useNavigate();
-
+    const {end} = useParams();
 
     const changeInputType = (e, inputPosition) => {
 
@@ -137,7 +137,7 @@ const Cadastro = () => {
             <div className="logos">
 
                 <div className="divVoltar">
-                   <Link to={"/"}> <img src={btVoltar} id='btVoltar' alt="" /></Link>
+                   <Link to={`/${end || 'home'}`}> <img src={btVoltar} id='btVoltar' alt="" /></Link>
                 </div>
                 <img src={logoSrc} className='logoMaloucos' alt="" />
 

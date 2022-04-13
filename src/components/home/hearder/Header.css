@@ -1,0 +1,50 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items:  center;
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    height: 12vw;
+    max-height: 100px;
+    width: 100%;
+    background-color: rgb(41, 41, 41);
+}
+
+.header img {
+    height: 100%;
+    width: auto;
+}
+#favoritos{
+    max-height: 75%;
+}
+
+.barraPesquisa{
+    background-color: rgb(68, 67, 67);
+    width: 70%;
+    height: 8vw;
+    border-radius: 15px;
+    padding-left: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.barraPesquisa img {
+    height: 80%;
+}
+
+#inputPesquisa {
+    background-color: transparent;
+    color: white;
+    width: 70%;
+    height: 5vw;
+    border: none;
+    font-size: 18px;
+    
+}
+
+#inputPesquisa:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}

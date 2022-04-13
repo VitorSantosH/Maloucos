@@ -23,11 +23,13 @@ const Caminhos = () => {
             <Routes>
 
                 <Route exact path='/home' element={<Home />} />
+                <Route exact path='/cadastro/:end' element={<Cadastro />} />
                 <Route exact path='/cadastro' element={<Cadastro />} />
                 <Route exact path="/termos-de-uso" element={<Termos />}/>
                 <Route exact path="/confirmacao/:email" element={<Confirmacao/>} />
                 <Route exact path="/recuperarConta/:email" element={<RecuperarConta/>} />
-                <Route exact path='/' element={<Login />} />
+                <Route exact path='/login' element={<Login />} />
+                <Route exact path='/' element={<Home />} />
                 <Route
                     path="*"
                     element={<Navigate to="/" replace />}

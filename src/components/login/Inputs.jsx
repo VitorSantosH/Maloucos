@@ -98,7 +98,7 @@ const InputsLogin = (props) => {
 
 
             <span id="esqueci">
-                <Link to={`/recuperarConta/${emailValue}`} style={{"textDecoration": "none", 'color': '#00F7EF'}} >
+                <Link to={`/recuperarConta/${emailValue}`} style={{ "textDecoration": "none", 'color': '#00F7EF' }} >
                     Esqueci minha senha
                 </Link>
             </span>
@@ -125,10 +125,12 @@ const InputsLogin = (props) => {
                 OU
             </span>
 
-            <div className="inscreva">
-                INSCRAVA-SE
-            </div>
+            <Link to='/cadastro/login' style={{ "textDecoration": "none", 'color': '#FFFFFF' }}>
+                <div className="inscreva">
+                    INSCRAVA-SE
 
+                </div>
+            </Link>
 
         </div>
     )
