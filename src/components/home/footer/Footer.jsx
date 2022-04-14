@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import './Footer.css';
 import logoFeed from '../../../assets/iconFeed.png';
@@ -23,12 +24,17 @@ const Footer = () => {
                 </span>
             </div>
 
-            <div className="iconPerfil">
-                <img src={iconUser} alt="" />
-                <span className="user">
-                    PERFIL
-                </span>
-            </div>
+            <Link to={'/login'}>
+
+                <div className="iconPerfil">
+                    <img src={iconUser} alt="" />
+                    <span className="user">
+                        PERFIL
+                    </span>
+                </div>
+
+            </Link>
+
 
         </div>
     )

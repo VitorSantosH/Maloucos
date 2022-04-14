@@ -7,7 +7,7 @@
     padding-left: 1vw;
     padding-right: 1vw;
     height: 12vw;
-    max-height: 100px;
+    max-height: 80px;
     width: 100%;
     background-color: rgb(41, 41, 41);
 }
@@ -24,6 +24,7 @@
     background-color: rgb(68, 67, 67);
     width: 70%;
     height: 8vw;
+    max-height: 60%;
     border-radius: 15px;
     padding-left: 4px;
     display: flex;
