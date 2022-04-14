@@ -1,0 +1,43 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    box-sizing: border-box;
+    background-color: rgb(41, 41, 41);
+    bottom: 0px;
+    position: fixed;
+    height: 14vw;
+    max-height: 100px;
+}
+
+.footer div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.iconPremiun {
+    height: 25vw;
+    width: 40%;
+    background-color: rgb(41, 41, 41);
+    border-radius: 10px 10px 0px 0px;
+    opacity: 1;
+    box-shadow: 0 2px 0 2px rgb(27, 27, 27);
+}
+
+.iconPremiun img {
+    margin-top: 4vw;
+    height: 8vw;
+    max-height: 150px;
+    width: auto;
+    
+}
+
+.iconFeed img, .iconPerfil img {
+    max-height: 6vw;
+    width: auto;
+}
