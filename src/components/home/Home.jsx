@@ -2,25 +2,21 @@ import React from "react";
 
 import './Home.css'
 import Header from "./hearder/Header";
-import Footer from './footer/Footer';
+import Footer from '../footer/Footer.jsx';
 import Categorias from "./categorias/Categorias";
+import Feed from "./feed/Feed";
 
 const Home = () => {
 
 
-    
+
 
     return (
         <div className="home">
-
-            <Header/>
-            
-            <Categorias/>
-
-            <h1>Home</h1>
-
-            <Footer/>
-
+            <Header />
+            <Categorias />
+            <Feed />
+            <Footer />
         </div>
     )
 }

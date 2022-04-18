@@ -1,0 +1,49 @@
+.feed {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-bottom: 10vh;
+
+}
+
+.feedCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #00F7EF;
+    width: 100%;
+
+}
+
+.spanCard {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.spanCard span {
+    width: 80%;
+    overflow-y: scroll;
+}
+
+.spanCard img {
+    
+    width: 40px;
+    height: 40px;
+}
+
+.thumb {
+    height: auto;
+    width: 100%;
+    max-width: 700px;
+}

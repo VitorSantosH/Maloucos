@@ -14,6 +14,8 @@ import Cadastro from "./cadastro/Cadastro.jsx";
 import Termos from "./termosDeUso/Termos.jsx";
 import Confirmacao from "./confirmacao/Confirmacao.jsx";
 import RecuperarConta from "./recuperarSenha/RecuperarConta.jsx";
+import Premiun from "./premiun/Premiun.jsx";
+import Player from "./player/Player.jsx";
 
 const Caminhos = () => {
 
@@ -29,6 +31,8 @@ const Caminhos = () => {
                 <Route exact path="/confirmacao/:email" element={<Confirmacao/>} />
                 <Route exact path="/recuperarConta/:email" element={<RecuperarConta/>} />
                 <Route exact path='/login' element={<Login />} />
+                <Route exact path="/premiun" element={<Premiun/>}/>
+                <Route exact path="/player/:obj" element={<Player/>} />
                 <Route exact path='/' element={<Home />} />
                 <Route
                     path="*"

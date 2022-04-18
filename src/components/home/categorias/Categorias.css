@@ -1,6 +1,6 @@
 .carga {
     width: 100%;
-    height: 14vh;
+    height: 9vh;
     max-height: 100px;
     overflow: hidden;
 }
@@ -19,9 +19,9 @@
     background-color: #00F7EF66;
     border: 1px solid #00F7EF;
     border-radius: 20px;
-    height: 50%;
+    height: 40%;
     min-width:  100px;
-    min-height: 50px;
+    min-height: 40px;
     width: auto;
     display: flex;
     justify-content: center;
@@ -29,7 +29,11 @@
     margin-left: 20px;
     text-align: center;
     box-sizing: border-box;
+    font-size: 15px;
 
+}
+.categoria:active{
+    background-color: #63eee9;
 }
 
 @media only screen and (min-width: 1600px) {
