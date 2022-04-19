@@ -4,15 +4,48 @@
     flex-direction: column;
     width: 100%;
 }
+.player:hover .controls, .player:hover .controls {
+    display: flex;
+}
 
 .controls {
     width: 100%;
-    display: flex;
+    display: none;
     box-sizing: border-box;
-    justify-content: space-around;
     align-items: center;
+    position: relative;
+    padding-left: 10px;
+    top: -30px;
+    background-color: black;
+
+}
+.timeVideo {
+    color: #00F7EF ;
+    margin-left: 5px;
+}
+.controls img {
+    height: 24px;
+    width: 24px;
+}
+.controls input {
+    width: 20%;
+}
+.volume {
+    display: flex;
+    flex-direction: row;
+    margin-left: 25px;
+}
+.imgControl {
+    margin-left: 25px;
+} 
+.volume input {
+    display: none;
+    width: 80px;
+    position: relative;
+ 
+    
 }
 
-.controls input {
-    width: 70%;
+.volume:hover input {
+        display: block;
 }

@@ -56,7 +56,7 @@ const Feed = () => {
 
                     <div className="spanCard">
                         <span>{obj.span}</span>
-                        <Link to={`/player/${obj.name}/${obj.thumbnail}`} style={{ "textDecoration": "none", 'color': '#FFFFFF' }}>
+                        <Link to={`/player/${obj.name}`} style={{ "textDecoration": "none", 'color': '#FFFFFF' }}>
                             <img src={iconIr} alt="" />
                         </Link>
 

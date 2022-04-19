@@ -1,10 +1,11 @@
 .cadastro {
     margin-top: 2vh;
-    height: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-y: scroll;
 }
 
 .logos {
@@ -111,4 +112,8 @@
     width: 30px;
     position: relative;
     top: 40px;
+}
+
+.cadastro h1 {
+    font-size: 30px;
 }
