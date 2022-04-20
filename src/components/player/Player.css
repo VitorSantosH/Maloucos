@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    color: #00F7EF;
 }
 .player:hover .controls, .player:hover .controls {
     display: flex;
@@ -15,8 +16,8 @@
     align-items: center;
     position: relative;
     padding-left: 10px;
-    top: -30px;
     background-color: black;
+    top: -1vw;
 
 }
 .timeVideo {
@@ -48,4 +49,34 @@
 
 .volume:hover input {
         display: block;
+}
+.volume:active input {
+    display: block;
+}
+
+.spanvideo {
+    background-color: #252525;
+    height: 30vw;
+    max-height: 180px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 5% 20px ;
+    display: flex;
+    margin-bottom: 100px;
+    
+}
+
+.spanvideo span {
+    margin-top: 10px;
+}
+.spanvideo img {
+    max-width: 30px ;
+    height: auto;
+    
+}
+
+.btCompartilhar {
+    margin-left: 10px;
+    position: relative;
+    top: -5px;
 }

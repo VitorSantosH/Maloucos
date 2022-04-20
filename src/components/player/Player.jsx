@@ -1,12 +1,12 @@
-import React, { useEffect, useState, useRef, useLayoutEffect } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState, useRef } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import Footer from "../footer/Footer";
 //import { Player as PlayerTag } from 'video-react'
 import './Player.css';
 //import "../../../node_modules/video-react/dist/video-react.css";
 import api from "../../services/api";
 import baseURL from "../../services/baseUrl";
-
+import Feed from '../home/feed/Feed';
 
 import btPlay from '../../assets/bt-play@2x.png';
 import btSom from '../../assets/bt-som@2x.png';
@@ -15,6 +15,8 @@ import btLegendas from '../../assets/bt-legendas@2x.png';
 import btConfig from '../../assets/bt-configuração@2x.png';
 import btAmpliar from '../../assets/bt-ampliar.png';
 import btFullScreen from '../../assets/bt-fullscreen@2x.png';
+import favoritos from '../../assets/bt-favoritos.png';
+import btVoltar from '../../assets/bt-voltar.png';
 
 
 function usePlayerState($videoPlayer, obj) {
@@ -27,9 +29,10 @@ function usePlayerState($videoPlayer, obj) {
 
     });
 
+    const [stateObj, setStateObj] = useState(obj)
     const [controlState, setControlState] = useState(true);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
 
         if (!playerState.playing) {
             $videoPlayer.current.play();
@@ -56,9 +59,18 @@ function usePlayerState($videoPlayer, obj) {
                     return console.log(err)
                 })
         }
+        if (obj != stateObj) {
+            setPlayerState({
+                ...playerState,
+                isLoaded: false
+
+            })
+            setStateObj(obj)
+            window.scrollTo(0,0)
+        }
 
 
-    }, [playerState, $videoPlayer])
+    }, [playerState, $videoPlayer, obj, stateObj])
 
 
     function toggleVideoPlay() {
@@ -82,12 +94,6 @@ function usePlayerState($videoPlayer, obj) {
     function showControls() {
 
         setControlState(!controlState)
-
-        var clear = setInterval(() => {
-            setControlState(false)
-            console.log('aqui')
-            clearInterval(clear)
-        }, 15000)
     }
 
     function mouseEnter() {
@@ -118,6 +124,8 @@ const Player = () => {
 
     const { obj } = useParams();
     const $videoPlayer = useRef(null);
+    const $divPlayer = useRef(null)
+    const navigate = useNavigate();
     const { playerState,
         toggleVideoPlay,
         handleTimeUpdate,
@@ -125,8 +133,18 @@ const Player = () => {
         showControls,
         controlState,
         mouseEnter,
-        mouseDown } = usePlayerState($videoPlayer, obj);
+        mouseDown } = usePlayerState($videoPlayer, obj,);
 
+
+    function ReturnDate() {
+
+        var date = new Date(playerState.video[0].date)
+
+        return (
+            <span>{date.toLocaleDateString()}</span>
+        )
+
+    }
 
     var toHHMMSS = (secs) => {
         var sec_num = parseInt(secs, 10)
@@ -141,20 +159,28 @@ const Player = () => {
 
     return (
         <div className="player">
-
+            <div className="back">
+                <img 
+                    src={btVoltar} 
+                    alt="" 
+                    onClick={e => navigate('/')}
+                    />
+            </div>
             {playerState.video[0] && (
                 < div
-                    onClick={e => showControls()}
+                    style={{ 'backgroundColor': "#252525" }}
+                    ref={$divPlayer}
                     onMouseOver={e => {
-                        console.log(e)
+
                         mouseEnter()
                     }}
                     onMouseOut={e => {
-                        console.log(e)
+
                         mouseDown()
                     }}
                 >
                     <video
+
                         ref={$videoPlayer}
                         style={{ "width": "100%" }}
                         src={`${baseURL}static/${playerState.video[0].URL}`}
@@ -162,53 +188,59 @@ const Player = () => {
                         onTimeUpdate={e => handleTimeUpdate()}
                         autoPlay={false}
 
+                        onClick={e => {
+                            toggleVideoPlay()
+                            showControls()
+                        }}
 
 
                     />
 
-                    <div className="controls" style={{ 'display': controlState ? 'flex' : "none" }}>
-                        <div
-                            onClick={e => toggleVideoPlay()}
-                        >
-                            {playerState.playing ?
-                                <img src={btPlay} alt="" />
-                                : "Pause"}
-                        </div>
+                    <div className="videoControls">
 
-                        <input
+                        <div className="controls" style={{ 'display': controlState ? 'flex' : "none" }}>
+                            <div
+                                onClick={e => toggleVideoPlay()}
+                            >
+                                {playerState.playing ?
+                                    <img src={btPlay} alt="" />
+                                    : "Pause"}
+                            </div>
 
-                            type="range"
-                            min={0}
-                            max={100}
-                            onChange={e => handleChangeVideoPercentage(e)}
-                            value={playerState.percentage}
-
-                        />
-                        <div className="timeVideo">
-                            {toHHMMSS($videoPlayer.current.currentTime)}
-                        </div>
-                        <div className="volume">
-                            <img src={btSom} alt="" />
                             <input
+
                                 type="range"
-                                min="0"
-                                value={$videoPlayer.current.volume}
-                                max="1"
-                                step="0.1"
-                                onChange={e => {
-                                    $videoPlayer.current.volume = e.target.value
+                                min={0}
+                                max={100}
+                                onChange={e => handleChangeVideoPercentage(e)}
+                                value={playerState.percentage}
+
+                            />
+                            <div className="timeVideo">
+                                {toHHMMSS($videoPlayer.current.currentTime)}
+                            </div>
+                            <div className="volume">
+                                <img src={btSom} alt="" />
+                                <input
+                                    type="range"
+                                    min="0"
+                                    value={$videoPlayer.current.volume}
+                                    max="1"
+                                    step="0.1"
+                                    onChange={e => {
+                                        $videoPlayer.current.volume = e.target.value
+                                    }}
+                                />
+                            </div>
+                            <img className="imgControl" src={btLegendas} alt="" />
+                            <img className="imgControl" src={btConfig} alt="" />
+                            <img className="imgControl" src={btAmpliar} alt="" />
+                            <img className="imgControl" src={btFullScreen} alt=""
+                                onClick={e => {
+                                    $videoPlayer.current.requestFullscreen();
                                 }}
                             />
-                        </div>
-                        <img className="imgControl" src={btLegendas} alt="" />
-                        <img className="imgControl" src={btConfig} alt="" />
-                        <img className="imgControl" src={btAmpliar} alt="" />
-                        <img className="imgControl" src={btFullScreen} alt=""
-                            onClick={e => {
-                                $videoPlayer.current.requestFullscreen();
-                            }}
-                        />
-                        {/**
+                            {/**
                          * <select name="" id="">
                             {[1, 2, 3].map(speed => (
                                 <option key={`speedChange_${speed}`}>
@@ -217,7 +249,9 @@ const Player = () => {
                             ))}
                         </select>
                          */}
+                        </div>
                     </div>
+
                 </div>
             )
             }
@@ -258,11 +292,21 @@ const Player = () => {
             )
             }
 
-            <button
-                onClick={e => console.log($videoPlayer)}
-            >
-                click
-            </button>
+            <div className="spanvideo">
+                <div className="btns">
+                    <img src={favoritos} alt="" />
+                    <img src={btCompartilhar} className={"btCompartilhar"} alt="" />
+                </div>
+                {playerState.video[0] && (
+                    <span>{playerState.video[0].span}</span>
+
+                )}
+
+                {playerState.video[0] && ReturnDate()}
+
+
+            </div>
+            <Feed />
             <Footer />
         </div >
     )
