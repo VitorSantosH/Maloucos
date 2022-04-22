@@ -3,14 +3,18 @@
     flex-direction: column;
     align-items: center;
     overflow-y: scroll;
+    justify-content: center;
     box-sizing: border-box;
-    margin-top: 5vh;
+  
+}
+.login .logoMaloucos {
+    margin-top: 5vw;
 }
 
 .logoMaloucos {
     height: auto;
     width: 70vw;
-    max-width: 500px;
+    max-width: 300px;
 }
 
 .login h1 {
@@ -130,4 +134,11 @@
     border-radius: 10px;
     padding-top: 0px;
     padding: 5px;
+}
+
+
+@media only screen and (min-width: 1000px) {
+    .InputsLogin {
+        display: none;
+    }
 }

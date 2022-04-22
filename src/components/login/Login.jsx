@@ -3,10 +3,11 @@ import {useNavigate} from 'react-router-dom';
 
 import './Login.css';
 import api from '../../services/api'
-
+import Input2 from "./Input2";
 
 import InputsLogin from "./Inputs";
-import logoSrc from '../../assets/logoMaloucos.png'
+import logoSrc from '../../assets/logoMaloucos.png';
+import Header from '../home/hearder/Header';
 import Footer from "../footer/Footer";
 
 const Login = () => {
@@ -50,11 +51,11 @@ const Login = () => {
 
     return (
         <div className="login">
-
+            <Header/>
             <img src={logoSrc}className='logoMaloucos' alt="" />
-
-            <h1>LOGIN</h1>            
+            <h1 id="h1Login" >LOGIN</h1>            
             <Change/>
+            <Input2/>
             <Footer/>
         </div>
     )

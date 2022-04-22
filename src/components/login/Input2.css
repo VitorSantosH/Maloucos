@@ -1,0 +1,128 @@
+.input2 {
+    display: none;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.loginsRedesInput2  {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.loginsRedesInput2   img {
+    width: 35px;   
+    background-color: #00F7EF; 
+    border-radius: 4px;
+    padding: 5px;
+}
+.loginsRedesInput2 div {
+    max-width: 40px;
+    margin: 5px;
+    
+    
+}
+.entreInput2 {
+    width: 330px;
+    background-color: #00F7EF;
+    color: black;
+    justify-content: center;
+    display: flex;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: larger;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+#esqueciInput2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: large;
+}
+
+.input2Email {
+    display: flex;
+    flex-direction: column;
+}
+
+.input2Email label {
+    margin-top: 30px;
+}
+
+.input2Email img {
+    max-width: 30px;
+}
+.input2Email input{
+    
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 10px 10px 8px 10px;
+    border-bottom: 1px solid #00F7EF;
+    border-radius: 4px 4px 0px 0px;
+}
+
+
+.input2Email input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    background-color: #2f3030;
+}
+#imgOlhoInput2 {
+    position: relative;
+    top: -30px;
+    left: 300px;
+}
+.meio {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.linha1, .linha2 {
+
+    width: 2px;
+    height: 200px;
+    background-color: #00F7EF;
+
+}
+#ouInput2 {
+    padding-top: 0px;
+}
+.ladoDireito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.inscrevaInput2 {
+    width: 330px;
+    height: 60px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight: 900;
+    background: linear-gradient(to right, #89fffd,  #05b0e4,#ec79df, #ef32d9);;
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .input2 {
+        display: flex;
+    }
+    #h1Login {
+        margin-left: 10px;
+    }
+    
+}

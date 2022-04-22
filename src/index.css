@@ -10,12 +10,29 @@ body {
   background-color: black;
   background-image: url("./assets/fundo.png");
   background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size:cover;
+  background-repeat: repeat-y;
   
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root::-webkit-scrollbar {
+  background: transparent;
+  width: 10px;
+}
+
+
+#root::-webkit-scrollbar-thumb {
+  background-color: #00F7EF;
+  border-radius: 15px ;
+  
+}
+
+#root::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+  
 }

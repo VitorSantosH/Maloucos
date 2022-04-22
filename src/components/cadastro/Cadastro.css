@@ -1,11 +1,13 @@
 .cadastro {
-    margin-top: 2vh;
+
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow-y: scroll;
+    overflow-x: hidden;
+  
 }
 
 .logos {
@@ -13,14 +15,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center ;
-    top: 0px;
-    position: absolute;
+    overflow-x: hidden;
+    overflow-y: scroll
     
 }
 
 .divVoltar {
     width: 100vw;
-    padding-top: 35px;
+    padding-top: 25px;
     padding-left: 15px;
 
 }
@@ -44,8 +46,8 @@
 .inputCadastro {
     display: flex;
     flex-direction: column;
-    width: 85vw;
-    margin-top: 20px;
+    width: 80vw;
+    margin-top: 10px;
 
 }
 
@@ -116,4 +118,8 @@
 
 .cadastro h1 {
     font-size: 30px;
+}
+
+.entre {
+    margin-bottom: 100px;
 }

@@ -6,7 +6,7 @@ import api from '../../services/api';
 import Swal from 'sweetalert2'
 import { useNavigate, useParams } from 'react-router-dom';
 import Termos from '../termosDeUso/Termos';
-
+import Footer from '../footer/Footer';
 
 
 import logoSrc from '../../assets/logoMaloucos.png'
@@ -251,7 +251,7 @@ const Cadastro = () => {
 
             <ReturnTerms />
 
-
+            <Footer/>
 
 
         </div>

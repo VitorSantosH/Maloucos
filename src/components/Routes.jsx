@@ -16,6 +16,8 @@ import Confirmacao from "./confirmacao/Confirmacao.jsx";
 import RecuperarConta from "./recuperarSenha/RecuperarConta.jsx";
 import Premiun from "./premiun/Premiun.jsx";
 import Player from "./player/Player.jsx";
+import AlterarSenha from "./alterarSenha/AlterarSenha.jsx";
+
 
 const Caminhos = () => {
 
@@ -33,6 +35,7 @@ const Caminhos = () => {
                 <Route exact path='/login' element={<Login />} />
                 <Route exact path="/premiun" element={<Premiun/>}/>
                 <Route exact path="/player/:obj" element={<Player/>} />
+                <Route exact path='/altsenha' element={<AlterarSenha/>} />
                 <Route exact path='/' element={<Home />} />
                 <Route
                     path="*"

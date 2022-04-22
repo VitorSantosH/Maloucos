@@ -4,8 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: scroll;
-    overflow-x: hidden;
+    width: 100%;
     padding-bottom: 10vh;
 
 }
@@ -33,11 +32,10 @@
 
 .spanCard span {
     width: 80%;
-    overflow-y: scroll;
 }
 
 .spanCard img {
-    
+
     width: 40px;
     height: 40px;
 }
@@ -46,4 +44,98 @@
     height: auto;
     width: 100%;
     max-width: 700px;
+}
+
+.videoDestaque {
+    display: none;
+    width: 100%;
+    margin-top: 80px;
+    box-sizing: border-box;
+
+}
+
+.videoDestaque img {
+    width: 40vw;
+    height: auto;
+    max-width: 550px;
+}
+
+.spanVideoPremiun {
+    max-width: 30vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    color: #00F7EF;
+}
+
+.spanVideoPremiun .date {
+    margin-top: 50px;
+}
+
+.accPremiun {
+
+    width: 15vw;
+    background-color: #333333;
+    height: 65px;
+    border-radius: 0px 14px 14px 0px;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    box-sizing: border-box;
+    color: #FF00E4;
+    font-size: 15px;
+    max-width: 170px;
+
+}
+
+.accPremiun img {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .videoDestaque {
+        display: flex;
+
+    }
+
+    .feedCard {
+        margin: 10px;
+        width: 18vw;
+    }
+    .spanCard {
+        font-size: 14px;
+    }
+    .variados {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80vw;
+        box-sizing: border-box;
+        position: relative;
+        left:  5.2vw;
+
+       
+    }
+
+}
+@media only screen and (min-width: 1500px) {
+    .variados {
+        left: 4vw ;
+    }
+}
+
+@media only screen and (min-width: 1700px) {
+    .variados {
+        left: 2.5vw ;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .variados {
+        left: 1vw ;
+    }
 }
