@@ -3,55 +3,60 @@
     background-image: url("../../assets/background 2.png");
     background-position: bottom;
     background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
+    background-repeat: repeat-y;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 10vh;
     font-size: 20px;
+    line-height: 1.5;
 }
+
 .premium h1 {
-    margin-top: 10vw;
+    margin-top: 30px;
     font-size: 30px;
 }
+
 .spanValor {
-    margin-top: 10vw;
+    margin-top: 40px;
 }
 
 .logoPremium {
+    margin-top: 100px;
     width: 70vw;
     height: auto;
-    max-width: 500px;
-    
+    max-width: 400px;
+
 }
+
 .assinarPremium {
-    background: linear-gradient(to right, #89fffd,  #05b0e4,#ec79df, #ef32d9);
+    background: linear-gradient(to right, #89fffd, #05b0e4, #ec79df, #ef32d9);
     width: 70vw;
-    max-width: 550px;
+    max-width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     box-sizing: border-box;
-    padding: 25px;
+    padding: 15px;
     border-radius: 4px;
     margin-bottom: 50px;
 }
+
 .assinarPremium h1 {
     margin: 0px;
 
 }
-.assinarPremium:active{
-    background: #ef32d9 ;
+
+.assinarPremium:active {
+    background: #ef32d9;
 }
 
 .diamante {
-    margin-top: 10vw;
+    margin-top: 30px;
     width: 10%;
     height: auto;
-    max-width:  70px;
+    max-width: 70px;
 }
 
 .premium ul {
@@ -59,8 +64,24 @@
 }
 
 @media only screen and (max-width: 550px) {
-    .premium h1{
-        font-size:  25px;
+    .premium h1 {
+        font-size: 25px;
     }
 
 }
+
+@media only screen and (max-width: 350px) {
+    .premium h1 {
+        font-size: 20px;
+    }
+
+    .spanValor {
+        font-size: 16px;
+    }
+
+    .assinarPremium {
+        padding: 15px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {}

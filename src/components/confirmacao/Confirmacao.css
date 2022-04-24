@@ -31,3 +31,33 @@
 #linkEntrar{
     text-decoration: none;
 }
+
+
+.entre3{
+    width: 75vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 4px ;
+    font-weight: 900;
+    font-size: 18px;
+    max-width: 400px;
+    color: black;
+    background-color: #00F7EF;
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .confirmacao span {
+        max-width: 400px;
+        font-size: 24px;
+    }
+    
+    .entre3{ 
+        margin-top: 50px;
+        max-width: 350px;
+    }
+
+}

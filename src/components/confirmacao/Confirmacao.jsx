@@ -24,7 +24,7 @@ const Confirmacao = () => {
 
             <Link id="linkEntrar" to={"/login"}>
 
-                <div className="entre">
+                <div className="entre3">
                     ENTRAR
                 </div>
 

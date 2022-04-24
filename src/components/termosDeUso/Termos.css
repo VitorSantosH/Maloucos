@@ -31,9 +31,33 @@
     top: -10vh;
 }
 
-.termosDeUso button{
+.btnTermos{
     display: block;
     position: absolute;
     right: 15px;
     top: 30px;
+}
+
+
+@media only screen and (min-width: 1000px)  {
+
+    .termosDeUso {
+        width: 800px;
+        max-height: 650px;
+        position: absolute;
+        top: 0px;
+        padding-top: 50px;
+        padding-bottom: 0px;
+        margin-top: 100px;
+        overflow-x: scroll;
+
+    }
+    .termosDeUso  span {
+        width: 80%;
+        top: 0px; 
+    }
+    .termosDeUso h1 {
+        top: 0px;
+    }
+
 }

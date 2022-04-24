@@ -1,5 +1,6 @@
 import React from "react";
 
+import Header from "../home/hearder/Header";
 import Footer from "../footer/Footer";
 import './Premiun.css';
 import logo from '../../assets/logoMaloucos.png';
@@ -12,6 +13,7 @@ const Premiun = () => {
 
     return (
         <div className="premium">
+            <Header/>
             <img src={logo} className='logoPremium' alt="" />
             <img src={diamante} className='diamante' alt="" />
             <h1>ASSINATURA PREMIUM</h1>

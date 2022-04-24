@@ -24,7 +24,7 @@ function useInputState() {
 
 const Input2 = () => {
 
-    const {inputsState} = useInputState();
+    const { inputsState } = useInputState();
 
     return (
         <div className="input2">
@@ -46,7 +46,7 @@ const Input2 = () => {
                     <img src={imgOlho} id='imgOlhoInput2' alt="" />
                 </div>
 
-            
+
 
                 <span id="esqueciInput2">
                     <Link to={`/recuperarConta/${inputsState.emailValue}`} style={{ "textDecoration": "none", 'color': '#00F7EF' }} >
@@ -89,9 +89,11 @@ const Input2 = () => {
 
 
             <div className="ladoDireito">
-                <div className="inscrevaInput2">
-                    INSCREVA-SE
-                </div>
+                <Link to={`/cadastro`} style={{ "textDecoration": "none", 'color': "white" }} >
+                    <div className="inscrevaInput2">
+                        INSCREVA-SE
+                    </div>
+                </Link>
             </div>
 
         </div>

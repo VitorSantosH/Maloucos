@@ -17,7 +17,7 @@ import RecuperarConta from "./recuperarSenha/RecuperarConta.jsx";
 import Premiun from "./premiun/Premiun.jsx";
 import Player from "./player/Player.jsx";
 import AlterarSenha from "./alterarSenha/AlterarSenha.jsx";
-
+import Perfil from "./perfil/Perfil.jsx";
 
 const Caminhos = () => {
 
@@ -36,6 +36,7 @@ const Caminhos = () => {
                 <Route exact path="/premiun" element={<Premiun/>}/>
                 <Route exact path="/player/:obj" element={<Player/>} />
                 <Route exact path='/altsenha' element={<AlterarSenha/>} />
+                <Route exact path='/perfil' element={<Perfil/>} />
                 <Route exact path='/' element={<Home />} />
                 <Route
                     path="*"

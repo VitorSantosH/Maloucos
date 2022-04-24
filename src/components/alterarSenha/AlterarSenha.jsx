@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from 'react-router-dom';
 
 import './AlterarSenha.css';
 
@@ -10,32 +11,52 @@ import checkBoxImg from '../../assets/checked.png'
 
 const AlterarSenha = () => {
 
-
+    const [login, setLogin] = useState({});
 
 
 
     return (
 
-        <div className="inputsCadastro">
-            <div className="altSenha">
-                <div className="inputCadastro">
+        <div className="AlteraSenha">
 
-                    <div className='SenhaLabel-Icon'>
-                        <label
-                            htmlFor=""
-
-                        >
-                        </label>
-                        <img
-                            src={imgOlho} alt=""
-
-                        />
-                    </div>
-                    <input
-                    />
-                </div>
-
+            <div className="voltar">
+                <Link to='/'>
+                    <img src={btVoltar} alt="" />
+                </Link>
             </div>
+
+            <img src={logoSrc} alt="" />
+
+            <h1>ALTERAR SENHA</h1>
+
+            <div className="containerAlterarSenha">
+                <label htmlFor="nomeCompleto">
+                    Senha atual
+                </label>
+                <img src={imgOlho} alt="" />
+                <input type="password" />
+            </div>
+
+            <div className="containerAlterarSenha">
+                <label htmlFor="nomeCompleto">
+                    Nova senha
+                </label>
+                <img src={imgOlho} alt="" />
+                <input type="password" />
+            </div>
+
+            <div className="containerAlterarSenha">
+                <label htmlFor="nomeCompleto">
+                    Confirmar nova senha
+                </label>
+                <img src={imgOlho} alt="" />
+                <input type="password" />
+            </div>
+
+            <div className="btnSalvarAltSenha">
+                Salvar
+            </div>
+
         </div>
     )
 }

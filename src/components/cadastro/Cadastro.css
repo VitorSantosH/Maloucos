@@ -12,6 +12,7 @@
 
 .logos {
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center ;
@@ -48,6 +49,7 @@
     flex-direction: column;
     width: 80vw;
     margin-top: 10px;
+    max-width: 500px;
 
 }
 
@@ -102,11 +104,12 @@
 .SenhaLabel-Icon {
     display: flex;
     flex-direction: row;
-    width: 85vw;
+    width: 75vw;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     padding-right: 20px;
+    max-width: 500px;
 
 }
 
@@ -121,5 +124,49 @@
 }
 
 .entre {
-    margin-bottom: 100px;
+    margin-bottom: 30px;
+}
+
+.lado1, .lado2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+}
+
+@media only screen and (min-width: 1000px) {
+    .inputsCadastro {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        box-sizing: border-box;
+        margin-top: 100px;
+    }
+    .inputsCadastro .entre {
+        display: none;
+    }
+    .divVoltar {
+        display: none;
+    }
+    .entre2 {
+        background-color: #00F7EF;
+        color: #2f3030;
+        height: 35px;
+        width: 330px;
+        font-size: larger;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+    }
+    .entre2:active {
+        background-color: #97faf7;
+    }
+    .lado1, .lado2  {
+        min-height: 280px;
+    }
+    .lado1 {
+        padding-bottom: 26px;
+    }
 }
